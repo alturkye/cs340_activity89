@@ -1,6 +1,6 @@
 /* invoice details query */
 SELECT
-    InvoiceDetails.InvoiceDetails,
+    InvoiceDetails.InvoiceID,
     Products.ProductName,
     InvoiceDetails.OrderQty,
     InvoiceDetails.UnitPrice,
