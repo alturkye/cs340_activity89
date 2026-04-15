@@ -1,10 +1,10 @@
 /* invoice details query */
 SELECT
-    InvoiceDetails.InvoiceID,
+    Products.ProductNumber,
     Products.ProductName,
+    InvoiceDetails.LineTotal,
     InvoiceDetails.OrderQty,
-    InvoiceDetails.UnitPrice,
-    InvoiceDetails.LineTotal
+    InvoiceDetails.UnitPrice
 FROM InvoiceDetails
 INNER JOIN Products ON InvoiceDetails.ProductNumber = Products.ProductNumber
-ORDER BY InvoiceDetails.InvoiceID ASC, Products.ProductName ASC;
+WHERE InvoiceDetails.InvoiceID = 3;

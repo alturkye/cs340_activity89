@@ -2,11 +2,10 @@
 SELECT
     Invoices.InvoiceID,
     Customers.CustomerName,
-    Invoices.InvoiceDate,
-    Invoices.TermsCodeID,
-    TermsCode.Description AS TermsDescription,
+    Customers.City,
+    Customers.State,
+    Invoices.InvoiceDate AS DATE,
     Invoices.TotalDue
 FROM Invoices
 INNER JOIN Customers ON Invoices.CustomerID = Customers.CustomerID
-INNER JOIN TermsCode ON Invoices.TermsCodeID = TermsCode.TermsCodeID
-ORDER BY Invoices.InvoiceDate DESC;
+WHERE Invoices.InvoiceID = 3;
